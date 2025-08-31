@@ -1,0 +1,179 @@
+[global]
+    # Display
+    monitor = 0
+    follow = none
+    
+    # Geometry
+    width = 300
+    height = 300
+    origin = top-right
+    offset = 10x50
+    scale = 0
+    notification_limit = 0
+    
+    # Progress bar
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+    progress_bar_corner_radius = 0
+    
+    # Appearance
+    indicate_hidden = yes
+    transparency = 0
+    separator_height = 2
+    padding = 8
+    horizontal_padding = 8
+    text_icon_padding = 0
+    frame_width = 2
+    frame_color = "#000000"
+    separator_color = frame
+    sort = yes
+    
+    # Text
+    font = "JetBrains Mono 10"
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+    
+    # Icons
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 32
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    
+    # History
+    sticky_history = yes
+    history_length = 20
+    
+    # Misc/Advanced
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/firefox
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    corner_radius = 0
+    ignore_dbusclose = false
+    
+    # Mouse
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+[experimental]
+    per_monitor_dpi = false
+
+[urgency_low]
+    # IMPORTANT: colors have to be defined in quotation marks.
+    background = "#222324"
+    foreground = "#858585"
+    highlight = "#434343"
+    timeout = 5
+    default_icon = /usr/share/icons/gnome/16x16/status/dialog-information.png
+
+[urgency_normal]
+    background = "#222324"
+    foreground = "#858585"
+    highlight = "#434343"
+    timeout = 5
+    default_icon = /usr/share/icons/gnome/16x16/status/dialog-information.png
+
+[urgency_critical]
+    background = "#b53c2f"
+    foreground = "#000000"
+    frame_color = "#000000"
+    highlight = "#ffffff"
+    timeout = 0
+    default_icon = /usr/share/icons/gnome/16x16/status/dialog-warning.png
+
+# Application specific rules with Nerd Font icons
+[spotify]
+    appname = "Spotify"
+    timeout = 5
+    background = "#1db954"
+    foreground = "#ffffff"
+    format = " %s\n%b"
+    
+[volume]
+    appname = "changevolume"
+    summary = "*olume*"
+    timeout = 2
+    format = " %s\n%b"
+
+[volume_mute]
+    appname = "changevolume"
+    summary = "*ute*"
+    timeout = 2
+    format = "󰖁 %s\n%b"
+    
+[brightness]
+    appname = "changebrightness" 
+    summary = "*rightness*"
+    timeout = 2
+    format = " %s\n%b"
+
+[screenshot]
+    appname = "scrot"
+    timeout = 3
+    format = " %s\n%b"
+
+[wifi]
+    appname = "NetworkManager"
+    summary = "*ifi*"
+    timeout = 3
+    format = " %s\n%b"
+
+[wifi_disconnect]
+    appname = "NetworkManager" 
+    summary = "*isconnect*"
+    timeout = 3
+    format = "󰤭 %s\n%b"
+
+[battery_low]
+    appname = "battery"
+    summary = "*attery*"
+    urgency = critical
+    timeout = 10
+    format = " %s\n%b"
+
+[battery_charging]
+    appname = "battery"
+    summary = "*harging*"
+    timeout = 5
+    format = " %s\n%b"
+
+[email]
+    appname = "thunderbird"
+    timeout = 8
+    format = " %s\n%b"
+
+[calendar]
+    appname = "calendar"
+    timeout = 5
+    format = " %s\n%b"
+
+[download]
+    appname = "*download*"
+    summary = "*ownload*"
+    timeout = 5
+    format = " %s\n%b"
+
+[file_manager]
+    appname = "thunar"
+    timeout = 3
+    format = " %s\n%b"
+
+[update]
+    appname = "xbps"
+    summary = "*pdate*"
+    timeout = 8
+    format = " %s\n%b"
